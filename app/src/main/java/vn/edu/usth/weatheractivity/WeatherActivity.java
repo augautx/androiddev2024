@@ -6,6 +6,8 @@ import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "Weather";
@@ -18,10 +20,15 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
-            // Add Home fragment to the fragment container
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, new ForecastFragment())
-                    .commit();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            fragmentTransaction.replace(R.id.weather_fragment_container, new WeatherFragment());
+
+            fragmentTransaction.replace(R.id.forecast_fragment_container, new ForecastFragment());
+
+            fragmentTransaction.commit();
         }
     }
+
 }

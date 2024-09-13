@@ -20,8 +20,7 @@
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:background="#66ebfa">
+        android:paddingRight="20dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,8 +53,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_gravity="center"
-        android:padding="16dp"
-        android:background="#66ebfa">
+        android:padding="16dp" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,8 +86,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_gravity="center"
-        android:padding="20dp"
-        android:background="#66ebfa">
+        android:padding="20dp" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -122,8 +119,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_gravity="center"
-        android:padding="20dp"
-        android:background="#66ebfa">
+        android:padding="20dp" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -156,8 +152,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_gravity="center"
-        android:padding="20dp"
-        android:background="#66ebfa">
+        android:padding="20dp" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -190,8 +185,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_gravity="center"
-        android:padding="20dp"
-        android:background="#66ebfa">
+        android:padding="20dp" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -224,8 +218,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_gravity="center"
-        android:padding="20dp"
-        android:background="#66ebfa">
+        android:padding="20dp" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
