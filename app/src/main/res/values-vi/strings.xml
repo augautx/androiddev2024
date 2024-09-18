@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">USTH Thời Tiết</string>
+    <string name="title_activity_weather">USTH Thời tiết</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="monday">Thứ hai</string>
+    <string name="rainy">Mưa</string>
+    <string name="cloudy">Mây</string>
+    <string name="rain_temp">Rainy\n18C - 20C</string>
+    <string name="cloud_temp">Cloud\n22C-30C</string>
+    <string name="tuesday">Thứ ba</string>
+    <string name="snowy">Tuyết</string>
+    <string name="snowy_temp">Snowy\n-1C - 2C</string>
+    <string name="wednesday">Wednesday\n</string>
+    <string name="sunny">Nắng</string>
+    <string name="sunny_temp">Sunny and hot\n35C - 40C</string>
+    <string name="thursday">Thứ 5</string>
+    <string name="friday">Thứ 6</string>
+    <string name="thunder">Thunder\n</string>
+    <string name="thunder_temp">Thunder\n16C - 18C</string>
+    <string name="saturday">Saturday</string>
+    <string name="typhoon">Typhoon</string>
+    <string name="typhoon_temp">Typhoon (Dangerous)\n15C - 20C</string>
+    <string name="sunday">Sunday</string>
+</resources>
