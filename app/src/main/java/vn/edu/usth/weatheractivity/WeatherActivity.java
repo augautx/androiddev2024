@@ -6,6 +6,9 @@ import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -28,7 +31,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class WeatherActivity extends AppCompatActivity {
-
+    private handlethread handlethread;
     private static final int REQUEST_WRITE_STORAGE = 112;
     private static final String MP3_FILE_NAME = "your_audio_file.mp3";
 
@@ -55,6 +58,15 @@ public class WeatherActivity extends AppCompatActivity {
         } else {
             copyAndPlayMP3();
         }
+
+        final Handler handler = new Handler(Looper.getMainLooper()) {
+            @Override
+            public void handleMessage(Message msg) {
+                String content = msg.getData().getString("server_response");
+                Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
+            }
+        };
+        handlethread = new handlethread(handler);
     }
 
     @Override
@@ -107,11 +119,11 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if ( id == R.id.action_refresh) {
-            Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
-            return true;
+            handlethread.NetworkRequest();
+            return true; // tao dong chu nho khi refresh
 
         } else if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, PrefActivity.class);
+            Intent intent = new Intent(this, PrefActivity.class); // dung intent de chuyen page (o setting)
             startActivity(intent);
             return true;
         }
